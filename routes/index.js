@@ -34,7 +34,7 @@ exports.oauth = function(req, res) {
       req.session.error = JSON.stringify(error);
       res.redirect('/');
     }
-    else { 
+    else {
       // store the tokens in the session
       req.session.oauthToken = oauthToken;
       req.session.oauthTokenSecret = oauthTokenSecret;
@@ -55,9 +55,9 @@ exports.oauth_callback = function(req, res) {
   });
 
   client.getAccessToken(
-    req.session.oauthToken, 
-    req.session.oauthTokenSecret, 
-    req.param('oauth_verifier'), 
+    req.session.oauthToken,
+    req.session.oauthTokenSecret,
+    req.param('oauth_verifier'),
     function(error, oauthAccessToken, oauthAccessTokenSecret, results) {
       if(error) {
         console.log('error');

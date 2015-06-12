@@ -4,7 +4,7 @@ block content
   h1 Evernote, Node.js & Express
   h1 Next up, Upload a New Note from a Kindle Note
   p
-    | Using the 
+    | Using the
     a(href='http://expressjs.com/') Express
     |  framework to use of OAuth to authenticate to the Evernote web service.
   hr
@@ -15,11 +15,11 @@ block content
   h2 Authentication
   - if(session.oauthAccessToken)
     a(href='/clear') Click here
-    |  to 
+    |  to
     | start over
   - else
     a(href='/oauth') Click here
-    |  to 
+    |  to
     | connect Evernote
 
   hr
@@ -32,23 +32,22 @@ block content
   h2 Current status
   ul
     li
-      b NoteStore URL:  
+      b NoteStore URL:
       = session.edamNoteStoreUrl
     li
-      b Web API URL prefix: 
+      b Web API URL prefix:
       = session.edamNoteStoreUrl
   h3 Token Credentials:
   ul
     li
-      b token:  
+      b token:
       = session.oauthAccessToken
     li
-      b secret:  
+      b secret:
       = session.oauthAccessTokenSecret
     li
-      b User ID:  
+      b User ID:
       = session.edamUserId
     li
-      b Expires:  
+      b Expires:
       = session.edamExpires
-    
