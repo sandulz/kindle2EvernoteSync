@@ -3,6 +3,8 @@ var Evernote = require('evernote').Evernote;
 var config = require('../config.json');
 var callbackUrl = "http://localhost:3000/oauth_callback";
 
+var fs = require('fs');
+
 // home page
 exports.index = function(req, res) {
   if(req.session.oauthAccessToken) {
@@ -82,3 +84,22 @@ exports.clear = function(req, res) {
   req.session.destroy();
   res.redirect('/');
 };
+
+// Fetch Local File and Push to Evernote Web
+function read(file, callback) {
+    fs.readFile(file, 'utf8', function(err, data) {
+        if (err) {
+            console.log(err);
+        }
+        console.log('OK: ' + file);
+        callback(data);
+    });
+}
+var output = read('/Users/alexander.close2/Dropbox/books/newestKindleNotes.txt', function(data) {
+    console.log(data);
+});
+
+
+
+
+
