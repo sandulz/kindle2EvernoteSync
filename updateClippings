@@ -14,6 +14,3 @@ NUM1=$(($LEGACYLENGTH + 2))
 
 # Remove number of lines from newestKindleClippings and overwrite addToEvernoteClippings
 tail -n +$NUM1 /Users/alexander.close2/Dropbox/books/kindleClippings/newestKindleClippings.txt > /Users/alexander.close2/Dropbox/books/kindleClippings/addToEvernoteClippings.txt
-
-# Now that newestKindleClippings is updated, update legacyKindleClippings
-# yes | cp -rf newestKindleClippings.txt legacyKindleClippings.txt
