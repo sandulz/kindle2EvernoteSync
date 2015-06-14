@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>464.000000:248.000000</string>
+				<string>229.000000:248.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -144,7 +144,7 @@ end run</string>
 					<dict>
 						<key>tokenizedValue</key>
 						<array>
-							<string>Are you sure you want to copy your Kindle's clippings to your Dropbox?</string>
+							<string>Are you sure you want to copy your Kindle's clippings and update the new Clippings file?</string>
 						</array>
 					</dict>
 				</dict>
@@ -166,11 +166,12 @@ end run</string>
 					<key>displayWarning</key>
 					<false/>
 					<key>explanationText</key>
-					<string></string>
+					<string>“My Clippings.txt” will be copied from your Kindle to “Dropbox/books/kindleClippings/newestKindleClippings.txt”
+and addToEvernoteClippings.txt will be updated.</string>
 					<key>negativeTitle</key>
 					<string>Cancel</string>
 					<key>questionText</key>
-					<string>Are you sure you want to copy your Kindle's clippings to your Dropbox?</string>
+					<string>Are you sure you want to copy your Kindle's clippings and update the new Clippings file?</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Ask for Confirmation</string>
@@ -275,7 +276,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>464.000000:445.000000</string>
+				<string>229.000000:445.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Confirmation.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -331,7 +332,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>cp /Volumes/Kindle/documents/My Clippings.txt ~/Users/alexander.close2/Dropbox/books/newestKindleNotes.txt</string>
+					<string>/Users/alexander.close2/Dropbox/code/kindle2EvernoteSync/./updateClippings</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -444,7 +445,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>464.000000:628.000000</string>
+				<string>229.000000:628.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -614,7 +615,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>464.000000:825.000000</string>
+				<string>229.000000:825.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Ask for Confirmation.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -670,7 +671,7 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>node ~/Users/alexander.close2/Dropbox/code/kindle2EvernoteSync/app.js</string>
+					<string>node /Users/alexander.close2/Dropbox/code/kindle2EvernoteSync/app.js</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -783,7 +784,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>464.000000:1008.000000</string>
+				<string>229.000000:1008.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -793,28 +794,28 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2017FFB4-2656-41DB-AB97-1D4DB4931507</key>
-		<dict>
-			<key>from</key>
-			<string>7B990588-29EE-4EB1-8541-622B895D83A5 - 7B990588-29EE-4EB1-8541-622B895D83A5</string>
-			<key>to</key>
-			<string>7219FF95-BE89-4433-BE59-BE1E022AD7E6 - 7219FF95-BE89-4433-BE59-BE1E022AD7E6</string>
-		</dict>
-		<key>50D5EE0F-AC85-46DF-8B1C-CA1E297DA342</key>
+		<key>6FA9C8F6-9F10-43A3-B3CB-345D4229E9C7</key>
 		<dict>
 			<key>from</key>
 			<string>5529560F-6440-4C2B-A298-137EA763D2E3 - 5529560F-6440-4C2B-A298-137EA763D2E3</string>
 			<key>to</key>
 			<string>79FFD96A-8BBC-48B3-BF92-BFD686E8FD43 - 79FFD96A-8BBC-48B3-BF92-BFD686E8FD43</string>
 		</dict>
-		<key>75A155CE-48F0-4FDA-A9CE-AA91E2BD3C95</key>
+		<key>A3C69926-F74F-4999-8F23-609AA35E18EC</key>
 		<dict>
 			<key>from</key>
 			<string>79FFD96A-8BBC-48B3-BF92-BFD686E8FD43 - 79FFD96A-8BBC-48B3-BF92-BFD686E8FD43</string>
 			<key>to</key>
 			<string>7B990588-29EE-4EB1-8541-622B895D83A5 - 7B990588-29EE-4EB1-8541-622B895D83A5</string>
 		</dict>
-		<key>C4434ADE-8B84-4D14-867D-AD3E3C4F5C75</key>
+		<key>C649A81F-75ED-44D6-83A7-3AA996806A6D</key>
+		<dict>
+			<key>from</key>
+			<string>7B990588-29EE-4EB1-8541-622B895D83A5 - 7B990588-29EE-4EB1-8541-622B895D83A5</string>
+			<key>to</key>
+			<string>7219FF95-BE89-4433-BE59-BE1E022AD7E6 - 7219FF95-BE89-4433-BE59-BE1E022AD7E6</string>
+		</dict>
+		<key>D0F07332-8813-43CB-AF11-494DC7EDCAED</key>
 		<dict>
 			<key>from</key>
 			<string>EE39F35F-E8B3-431C-9C20-E0168D06A8DE - EE39F35F-E8B3-431C-9C20-E0168D06A8DE</string>

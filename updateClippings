@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Script to delete duplicate kindle clippings and prepare addToEvernoteClippings file for JS API import.
+#
+
+# Copy File from Kindle to Local Filesystem
+yes | cp -rf /Volumes/Kindle/documents/My\ Clippings.txt /Users/alexander.close2/Dropbox/books/kindleClippings/newestKindleClippings.txt
+
+# Store line number of legacyKindleClippings
+LEGACYLENGTH="$(wc -l < /Users/alexander.close2/Dropbox/books/kindleClippings/legacyKindleClippings.txt)"
+
+# Add 2 to the return number
+NUM1=$(($LEGACYLENGTH + 2))
+
+# Remove number of lines from newestKindleClippings and overwrite addToEvernoteClippings
+tail -n +$NUM1 /Users/alexander.close2/Dropbox/books/kindleClippings/newestKindleClippings.txt > /Users/alexander.close2/Dropbox/books/kindleClippings/addToEvernoteClippings.txt
+
+# Now that newestKindleClippings is updated, update legacyKindleClippings
+# yes | cp -rf newestKindleClippings.txt legacyKindleClippings.txt

@@ -86,7 +86,7 @@ exports.clear = function(req, res) {
 };
 
 // Fetch Local File and Push to Evernote Web
-function read(file, callback) {
+function readFile(file, callback) {
     fs.readFile(file, 'utf8', function(err, data) {
         if (err) {
             console.log(err);
@@ -95,8 +95,22 @@ function read(file, callback) {
         callback(data);
     });
 }
-var output = read('/Users/alexander.close2/Dropbox/books/newestKindleNotes.txt', function(data) {
-    console.log(data);
+var output = readFile('/Users/alexander.close2/Dropbox/books/kindleClippings/newestKindleClippings.txt', function(data) {
+    dataSplit = data.split('==========');
+
+    var title = dataSplit[0].split('\r\n- ')[0].replace('\r\n',''),
+        date = dataSplit[1].split('\r\n')[0],
+        location = dataSplit[0].split('\r\n- ')[1].replace('\r\n',''),
+        text = dataSplit[1].split('\r\n\r\n')[1];
+
+
+
+    console.log(title);
+    console.log(date);
+    console.log(location);
+    console.log(text);
+
+
 });
 
 
