@@ -36,6 +36,7 @@ app.get('/', routes.index);
 app.get('/oauth', routes.oauth);
 app.get('/oauth_callback', routes.oauth_callback);
 app.get('/clear', routes.clear);
+app.get('/upload', routes.upload);
 
 // Run
 http.createServer(app).listen(app.get('port'), function(){
